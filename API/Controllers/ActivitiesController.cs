@@ -23,8 +23,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<string>> CreateActivity([FromBody] CreateActivityDto activityDto)
+        public async Task<ActionResult<string>> CreateActivity( CreateActivityDto activityDto)
         {
+            Console.WriteLine($"Title: {activityDto.Title}");
             return HandleResult(await Mediator.Send(new CreateActivity.Command{ActivityDto = activityDto}));
         }
 

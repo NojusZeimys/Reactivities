@@ -13,7 +13,7 @@ namespace Application.Activities.Validators
     {
         public CreateActivityValidator() : base(x=>x.ActivityDto)
         {
-        
+            
         }
 
     }
